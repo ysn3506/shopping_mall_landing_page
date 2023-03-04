@@ -1,7 +1,9 @@
 import React from 'react';
 
 function LoginDirector() {
-    return <button className='login-director'>Click for privileged shopping experience</button>;
+    return (
+      <button className="login-director">Sign in to exclusive shopping</button>
+    );
 }
 
 export default LoginDirector;

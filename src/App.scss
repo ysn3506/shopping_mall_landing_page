@@ -6,16 +6,15 @@
 @import "components/slider/style";
 @import "views/home/style.scss";
 @import "components/login-director/style";
+@import "components/scroll-down-icon/style";
 
-
-.App{ padding:0;
-
+.App {
+  padding: 0;
 }
 
 
 .fade-enter {
   opacity: 0;
-
 }
 
 .fade-enter.fade-enter-active {
@@ -43,7 +42,7 @@
 
 
 .black-enter {
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
 
 }
 
@@ -53,7 +52,7 @@
 }
 
 .black-enter-done {
-    background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 1);
 }
 
 .black-exit {
@@ -69,5 +68,3 @@
   background-color: rgba(0, 0, 0, 0);
   transition: opacity 250ms ease-out;
 }
-
-
