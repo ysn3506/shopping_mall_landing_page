@@ -1,0 +1,72 @@
+@import "./main-styles/_mixins";
+
+@import "components/header/style";
+@import "components/burger-icon/style";
+@import "components/slide/style";
+@import "components/slider/style";
+@import "views/home/style.scss";
+
+
+.App{ padding:0;
+
+}
+
+
+.fade-enter {
+  opacity: 0;
+
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 0.5;
+  transition: opacity 250ms ease-out;
+}
+
+.fade-enter-done {
+  opacity: 1;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0.5;
+  transition: opacity 250ms ease-out;
+}
+
+.fade-exit-done {
+  opacity: 0;
+  transition: opacity 250ms ease-out;
+}
+
+
+.black-enter {
+  background-color: rgba(0,0,0,0);
+
+}
+
+.black-enter.black-enter-active {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 250ms ease-out;
+}
+
+.black-enter-done {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.black-exit {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.black-exit.black-exit-active {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 250ms ease-out;
+}
+
+.black-exit-done {
+  background-color: rgba(0, 0, 0, 0);
+  transition: opacity 250ms ease-out;
+}
+
+
