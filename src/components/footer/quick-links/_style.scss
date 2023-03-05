@@ -1,0 +1,19 @@
+.quick-links{
+    display: grid;
+grid-template-columns:1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+justify-content: center;
+align-items: baseline;
+    text-align: center;
+    gap:1.5rem;
+    a{
+        color:inherit;
+        font-size:1.2rem;
+    }
+
+    @include desktop{
+    grid-template-columns:1fr 1fr 1fr ;
+    grid-template-rows: auto;
+    gap:3rem;
+    }
+}

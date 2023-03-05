@@ -1,0 +1,72 @@
+.footer{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items:center;
+    padding:3rem 1rem 5rem;
+    gap:3rem;
+    grid-auto-flow: dense;
+
+
+    @include tabletLandscape {
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+        padding: 3rem 5rem;
+            gap:4rem;
+    }
+        @include tabletPortrait {
+            grid-template-rows: auto;
+            grid-template-columns: 1fr 1fr;
+            padding: 3rem 5rem;
+            gap: 4rem;
+        }
+
+
+    @include desktop{
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr ;
+            padding: 3rem 5rem;
+                gap:4rem;
+    }
+
+    @include desktopLg {
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 3rem 5rem;
+        gap: 7rem;
+    }
+
+    
+     .footer-grid-item{
+        color: inherit;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        @include desktop{
+            height: 100%;
+        }
+
+        @include tabletLandscape {
+            height: 100%;
+        }
+        @include tabletPortrait {
+            height: 100%;
+        }
+
+        h3{
+            text-align: center;
+            font-size:1.8rem;
+                font-family: inherit;
+        }
+        img{
+            width:10rem;
+            height: 10rem;
+        }
+
+        
+     }
+}

@@ -1,0 +1,42 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .social-media-button-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+
+        .social-media-button {
+            padding: 0;
+            border: none;
+            color: 0;
+            background-color: transparent;
+            transform: scale(1);
+            transition: transform 250ms ease-in-out;
+
+            img {
+                width: 2rem;
+                height: 2rem;
+            }
+
+        }
+
+        .social-media-button:hover {
+            transform: scale(1.2);
+            transition: transform 250ms ease-in-out;
+            cursor: pointer;
+        }
+    }
+    span{
+        color:#000;
+        // font-weight: 900;
+        img.footer-span-icon {
+            width: 1rem;
+            height: 1rem;
+            margin-bottom:- 0.25rem;
+        }
+    }
+}

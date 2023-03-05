@@ -1,0 +1,18 @@
+.location{
+    button{
+        display: flex;
+        @include desktop{
+            display: none;
+        }
+        border:none!important;
+        background-color: transparent;
+      
+    }
+
+    .qr-code{
+        display: none;
+        @include desktop{
+            display: flex;
+        }
+    }
+}
