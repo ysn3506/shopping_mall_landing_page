@@ -1,5 +1,10 @@
 import { getAssets } from "../service/apis";
-import { addError, addLogo, addSliderPhotos } from "../storage/redux/actions";
+import {
+  addError,
+  addFeaturePhotos,
+  addLogo,
+  addSliderPhotos,
+} from "../storage/redux/actions";
 import { store } from "../storage/store";
 
 const loadLogo = () =>
@@ -12,7 +17,12 @@ const loadSliderPhotos = () =>
     .then((res) => store.dispatch(addSliderPhotos(res.sliderphotos)))
     .catch((err) => console.log(err));
 
+const loadFeaturePhotos = () =>
+  getAssets("featurePhotos")
+        .then((res) => store.dispatch(addFeaturePhotos(res.featurePhotos)))
+    .catch((err) => console.log(err));
+
 const loader = () =>
-  Promise.all([loadLogo(), loadSliderPhotos()]).catch(() => addError());
+  Promise.all([loadLogo(), loadSliderPhotos(), loadFeaturePhotos()]).catch(() => addError());
 
 export default loader;

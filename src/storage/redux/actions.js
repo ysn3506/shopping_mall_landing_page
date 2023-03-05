@@ -13,3 +13,8 @@ export const addSliderPhotos = (item) => ({
 export const addError = () => ({
     type: CONSTANTS.SET_ERROR
 })
+
+export const addFeaturePhotos = (item) => ({
+  type: CONSTANTS.SET_FEATURE_PHOTOS,
+  payload: item,
+});

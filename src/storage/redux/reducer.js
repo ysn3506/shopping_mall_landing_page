@@ -3,6 +3,7 @@ import constants from "./constants";
 const INITIAL_STATE = {
     logo:{name:"", url:"", alt:""},
     sliderPhotos: [],
+    featurePhotos:[],
     error:false
 };
 
@@ -17,6 +18,11 @@ const reducer = (state = INITIAL_STATE, action = {}) => {
       return {
         ...state,
         sliderPhotos: action.payload,
+      };
+    case constants.SET_FEATURE_PHOTOS:
+      return {
+        ...state,
+        featurePhotos: action.payload,
       };
     case constants.SET_ERROR:
       return {
