@@ -1,0 +1,52 @@
+.card {
+
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 200px;
+    height: 250px;
+    font-family: inherit;
+    font-weight: 400;
+    border-radius: 0.75rem;
+    background: rgba(0, 0, 0, .75);
+    box-shadow: 5px 8px 8px rgba(0, 0, 0, .75);
+    padding: 1rem;
+
+
+    @include mobileLandscape {
+        width: 180px;
+        height: 200px;
+    }
+
+    @include desktop {
+        width: 250px;
+        height: 350px;
+    }
+
+    @include tabletLandscape {
+        width: 180px;
+        height: 250px;
+    }
+
+    .card-content {
+        .card-title {
+            font-size: 1.25rem;
+            text-align: left;
+
+        }
+
+        .card-body {
+            font-size: 1rem;
+            margin: auto auto;
+        }
+
+
+
+        .comment-date {
+            position: absolute;
+            bottom: 1rem;
+            font-size: .8rem;
+        }
+    }
+
+}

@@ -7,7 +7,7 @@ function SliderSlide({ content }) {
     
     const slideContent = () => <div className='slide-content'>
 
-        <p>{motto}</p>
+        <h1>{motto}</h1>
 
     </div>
 

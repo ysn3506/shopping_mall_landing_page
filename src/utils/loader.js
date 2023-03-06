@@ -4,6 +4,7 @@ import {
   addFeaturePhotos,
   addLogo,
   addSliderPhotos,
+  addTestimonialBg,
 } from "../storage/redux/actions";
 import { store } from "../storage/store";
 
@@ -19,10 +20,22 @@ const loadSliderPhotos = () =>
 
 const loadFeaturePhotos = () =>
   getAssets("featurePhotos")
-        .then((res) => store.dispatch(addFeaturePhotos(res.featurePhotos)))
+    .then((res) => store.dispatch(addFeaturePhotos(res.featurePhotos)))
     .catch((err) => console.log(err));
 
-const loader = () =>
-  Promise.all([loadLogo(), loadSliderPhotos(), loadFeaturePhotos()]).catch(() => addError());
+const loadTestimonialBg = () =>
+  getAssets("testimonialPhoto")
+    .then((res) => store.dispatch(addTestimonialBg(res.testimonialBackground)))
+    .catch((err) => console.log(err));
+
+const loader = () => Promise.all([
+    loadLogo(),
+    loadSliderPhotos(),
+    loadFeaturePhotos(),
+    loadTestimonialBg(),
+  ])
+    .catch(() => addError())
+   
+
 
 export default loader;

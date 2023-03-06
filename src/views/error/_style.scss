@@ -1,0 +1,25 @@
+.error-wrapper {
+    width: 100vw;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #2c2c2c 0%, black 100%);
+
+    h1 {
+        color: white;
+    }
+
+    .submit-button {
+        border: 1px solid black;
+        background: white;
+        color: linear-gradient(to bottom, #2c2c2c 0%, black 100%);
+        width: fit-content;
+        padding: 1rem;
+        border-radius: 0.75rem;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+}

@@ -1,10 +1,12 @@
 import constants from "./constants";
 
 const INITIAL_STATE = {
-    logo:{name:"", url:"", alt:""},
-    sliderPhotos: [],
-    featurePhotos:[],
-    error:false
+  logo: { name: "", url: "", alt: "" },
+  sliderPhotos: [],
+  featurePhotos: [],
+  error: false,
+  testimonialBackground: { name: "", url: "", alt: "" },
+  loading: false,
 };
 
 const reducer = (state = INITIAL_STATE, action = {}) => {
@@ -19,10 +21,20 @@ const reducer = (state = INITIAL_STATE, action = {}) => {
         ...state,
         sliderPhotos: action.payload,
       };
+    case constants.SET_TESTIMONIAL_BACKGROUND:
+      return {
+        ...state,
+        testimonialBackground: action.payload,
+      };
     case constants.SET_FEATURE_PHOTOS:
       return {
         ...state,
         featurePhotos: action.payload,
+      };
+    case constants.SET_LOADING:
+      return {
+        ...state,
+        loading: action.payload,
       };
     case constants.SET_ERROR:
       return {

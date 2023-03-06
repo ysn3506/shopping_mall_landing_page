@@ -5,7 +5,6 @@
 @import "components/slide/style";
 @import "components/slider/style";
 @import "views/home/style.scss";
-@import "components/login-director/style";
 @import "components/scroll-down-icon/style";
 @import "components/feature-screen/style";
 @import "components/footer/style";
@@ -13,6 +12,11 @@
 @import "components/footer/newsletter-subscription/style";
 @import "components/footer/social-media/style";
 @import "components/footer/quick-links/style";
+@import "components/testimonials/style";
+@import "components/card/style";
+@import "views/error/style";
+@import "components/loading-spinner/style";
+@import "views/loading-view/style";
 
 .App {
   padding: 0;

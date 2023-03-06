@@ -5,10 +5,9 @@ import { useSelector } from "react-redux";
 
 function FeatureGrid() {
   const featureItems = useSelector((state) => state.reducer.featurePhotos);
-  console.log(featureItems);
 
   useEffect(() => {
-    const animateTo=setTimeout(() => {
+    const animateTo = setTimeout(() => {
       const grid = document.querySelector(".grid");
       const items = document.querySelectorAll(".grid-item");
       items.forEach((item) => {
@@ -34,30 +33,24 @@ function FeatureGrid() {
           });
         });
       });
-
-      
     }, 0);
-  
-      
-      return () => {
-          clearTimeout(animateTo)
-      };
-      
+
+    return () => {
+      clearTimeout(animateTo);
+    };
   }, [featureItems]);
-    
-    
-    
 
   return (
     <div className="container feature">
       <div className="grid">
-        {featureItems.map((el,index)=>  <div className="grid-item" key={index}>
-              <p>{el.motto}</p>
-              <div className="img-wrapper">
-                <img src={el.url} alt={el.alt} />
-              </div>
-            </div>)
-          }
+        {featureItems.map((el, index) => (
+          <div className="grid-item" key={index}>
+            <p>{el.motto}</p>
+            <div className="img-wrapper">
+              <img src={el.url} alt={el.alt} />
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

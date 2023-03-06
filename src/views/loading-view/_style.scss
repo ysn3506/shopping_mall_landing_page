@@ -1,0 +1,11 @@
+.loading-view-wrapper{
+        width: 100%;
+        display: flex;
+        position: absolute;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to bottom, #2c2c2c 0%, black 100%);
+        z-index:99;
+}

@@ -20,10 +20,9 @@ function Slider() {
         spaceBetween={0}
         slidesPerView={1}
         virtual
-        autoplay={{ delay: 2500 , disableOnInteraction:false}}
+        autoplay={{ delay: 2500, disableOnInteraction: false }}
         speed={1000}
         effect="fade"
-            
       >
         {slides.map((item, index) => (
           <SwiperSlide key={index + item.name + "swiper"} virtualIndex={index}>

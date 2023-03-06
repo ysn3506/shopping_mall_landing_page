@@ -1,30 +1,40 @@
 .header-main {
-    padding:15px 15px 0 15px;
+    padding: 15px 15px 0 15px;
+
+  
+    @include tabletPortrait {
+        padding: 15px 15px 0 15px;
+    }
+
+    @include tabletLandscape {
+        padding: 15px 15px 0 15px;
+    }
+
     @include desktopLg {
         padding: 40px 75px;
     }
     
-    @include tabletPortrait {
-        padding: 30px;
-    }
-    
-    @include tabletLandscape {
+    @include desktop {
         padding: 40px 75px;
     }
+
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 2;
     color:white;
-  
+    background-color: transparent;
+    // transition: background-color 250ms ease-in-out;
+    // -webkit-transition: background-color 250ms ease-in-out;
+
     .header-wrapper {
 
         justify-content: space-between;
         display: grid;
         grid-template-columns: 1fr 1fr;
 
-       
+
         @include mobileLandscape {
             grid-template-columns: 1fr 1fr;
         }
@@ -32,22 +42,25 @@
         @include tabletLandscape {
             grid-template-columns: 1fr 1fr 1fr;
         }
+
         @include desktop {
             grid-template-columns: min-content max-content max-content;
         }
 
         .svg-wrapper {
-            display: flex ;
+            display: flex;
             align-items: flex-end;
             justify-content: flex-end;
             position: relative;
+
             @include desktop {
                 justify-content: center;
             }
-            
+
             @include tabletLandscape {
                 justify-content: center;
             }
+
             gap:2rem;
             width: auto;
 
@@ -59,20 +72,22 @@
                 // max-width:5rem;
 
             }
+
             a {
-                    color: white;
-                    position: relative;
-                    font-size: 1.5rem;
-                    display: none;
-                    cursor: pointer;
-                    @include desktop {
-                        display: block;
-                    }
-                    
-                    @include tabletLandscape {
-                        display: block;
-                    }
+                color: white;
+                position: relative;
+                font-size: 1.5rem;
+                display: none;
+                cursor: pointer;
+
+                @include desktop {
+                    display: block;
                 }
+
+                @include tabletLandscape {
+                    display: block;
+                }
+            }
 
             a::after {
                 content: '';
@@ -88,71 +103,86 @@
                 transition: opacity 300ms, transform 300ms;
 
             }
-            
+
             a:hover::after,
             a:focus::after {
                 opacity: 1;
                 // transform: translate3d(0, 0.2em, 0);
                 transform: scale(1);
             }
-           
+
 
         }
 
         .svg-wrapper.logo {
             justify-content: flex-start;
-            margin-bottom:-1rem;
+            margin-bottom: -1rem;
         }
 
-        .svg-wrapper.lang{
+        .svg-wrapper.lang {
             display: none;
-            @include desktop{
+
+            @include desktop {
                 display: flex;
             }
-            @include tabletLandscape{
-                    display: flex;
+
+            @include tabletLandscape {
+                display: flex;
             }
 
             justify-content: flex-end;
-         
+
         }
 
 
         .divider {
             width: 100%;
-            margin-bottom:0;
+            margin-bottom: 0;
         }
 
 
-}
-.burger-menu-content {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top:100%;
-    left:0;
-    width: 100%;
-    gap: 4rem;
-    padding: 4rem 15px;
-    justify-content: center;
-    align-items: center;
+    }
 
-    background-color: #000;
+    .burger-menu-content {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        gap: 4rem;
+        padding: 4rem 15px;
+        justify-content: center;
+        align-items: center;
 
-    a{
-        display: block;
-        color:transparent;
-        font-size: 1.5rem;;
+        background-color: #000;
 
+        a {
+            display: block;
+            color: transparent;
+            font-size: 1.5rem;
+            ;
+
+        }
+    }
+
+    .burger-menu-content.visible {
+        display: flex;
+
+        a {
+            color: #fff;
+        }
     }
 }
 
-.burger-menu-content.visible{
-    display: flex;
-    a{
-        color:#fff;
+.header-main.dark {
+    background-color: rgb(0,0,0);
+
+    @include desktopLg {
+        padding: 40px 75px 0px;
     }
-}
+    transition: background-color 250ms ease-in-out;
+    -webkit-transition: background-color 250ms ease-in-out;
 }
 
 

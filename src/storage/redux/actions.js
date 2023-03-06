@@ -18,3 +18,13 @@ export const addFeaturePhotos = (item) => ({
   type: CONSTANTS.SET_FEATURE_PHOTOS,
   payload: item,
 });
+
+export const addTestimonialBg = (item) => ({
+  type: CONSTANTS.SET_TESTIMONIAL_BACKGROUND,
+  payload: item,
+});
+
+export const setLoadingStatus = (item) => ({
+    type: CONSTANTS.SET_LOADING,
+    payload:item,
+})
